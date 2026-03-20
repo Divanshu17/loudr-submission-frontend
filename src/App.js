@@ -63,7 +63,7 @@ const Navbar = () => (
     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
   >
     <div className="nav-left">
-      <span className="nav-logo">✦ LOUDR</span>
+      <span className="nav-logo">✦ LOUDER</span>
       <span className="nav-slash">/</span>
       <span className="nav-product">Event Concierge</span>
     </div>
@@ -78,7 +78,7 @@ const Navbar = () => (
           </svg>
         </a>
       </div>
-      <span className="nav-tag">LOUDR</span>
+      <span className="nav-tag">LOUDER</span>
     </div>
     <style>{`
       .navbar {
@@ -603,7 +603,7 @@ const Footer = () => (
     <div className="footer-inner">
       <div className="footer-left">
         <span className="footer-built">Built for</span>
-        <span className="footer-loudr">✦ LOUDR</span>
+        <span className="footer-loudr">✦ LOUDER</span>
         <span className="footer-built">by</span>
         <span className="footer-name">Divanshu Kachhawa</span>
       </div>
@@ -843,8 +843,8 @@ export default function App() {
           display: flex; align-items: center; gap: 14px; margin-bottom: 20px;
         }
         .sh-label {
-          font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
-          color: rgba(255,255,255,0.25); white-space: nowrap;
+          font-size: 13px; font-weight: 700; letter-spacing: 0.14em;
+          color: rgba(255,255,255,0.55); white-space: nowrap;
         }
         .sh-line { flex: 1; height: 1px; background: rgba(255,255,255,0.07); }
         .sh-count {
