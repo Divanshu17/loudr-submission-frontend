@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# AI Event Concierge — Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Submission for **LOUDER** Full Stack Engineer Intern Assignment  
+> Built by **Divanshu Kachhawa** · divanshu1704@gmail.com
 
-## Available Scripts
+## 🔗 Live Demo
 
-In the project directory, you can run:
+**Frontend:** https://loudr-submission-frontend1.vercel.app  
+**Backend API:** https://loudr-submission-backend-1.onrender.com
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧠 What It Does
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A full-stack AI-powered platform that takes a natural language description of any event and returns a structured venue proposal — including venue name, location, estimated cost, a "why it fits" justification, and highlights.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tech Stack
 
-### `npm run build`
+| Layer | Technology |
+|---|---|
+| Frontend | React, Framer Motion, Axios |
+| Styling | Tailwind CSS + custom CSS-in-JS |
+| Font | Syne (Google Fonts) |
+| Deployment | Vercel |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✨ Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🔍 Natural language event input with animated search bar
+- ⚡ Real-time AI-generated venue proposals
+- ✦ Highlights section per venue recommendation
+- 🕘 Persistent search history (survives page refresh)
+- 💀 Skeleton shimmer loading state
+- 🎨 Fully animated UI with Framer Motion (3D card tilt, stagger, ripple)
+- 📱 Fully responsive (mobile + desktop)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Run Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the repo
+```bash
+git clone https://github.com/Divanshu17/loudr-submission-frontend.git
+cd loudr-submission-frontend
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Create `.env` file in the root
+```env
+REACT_APP_API_URL=http://localhost:5000
+```
 
-## Learn More
+### 4. Start the app
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app runs at `http://localhost:3000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Make sure the backend is also running locally on port 5000, or point `REACT_APP_API_URL` to the live Render URL.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📁 Project Structure
 
-### Analyzing the Bundle Size
+```
+src/
+└── App.jsx        # All components — Navbar, Hero, SearchInput,
+                   # ResultCard, HistoryCard, Footer, LoadingState
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔌 API Endpoints Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/api/generate-event` | Send event description, get AI venue proposal |
+| `GET` | `/api/history` | Fetch all previous searches |
